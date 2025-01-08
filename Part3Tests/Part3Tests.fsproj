@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="UnitTest2.fs" />
+    <Compile Include="UnitTest3.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Part2\Part2.fsproj" />
+    <ProjectReference Include="..\Part3\Part3.fsproj" />
   </ItemGroup>
 
 </Project>

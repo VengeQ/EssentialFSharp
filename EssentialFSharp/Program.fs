@@ -7,6 +7,6 @@ let rnd () =
     let rand = Random()
     rand.Next(100)
 
-let x =List.init 50 (fun _ -> rnd())
+let x = List.init 50 (fun _ -> rnd())
 
 Console.Write(x)
