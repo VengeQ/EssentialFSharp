@@ -11,7 +11,7 @@ type NullAndExceptionsTests() =
     [<TestCase("2023-01-25", 25)>]
     [<TestCase("9999-11-30", 30)>]
     [<TestCase("0001-08-8", 8)>]
-    member this.ValidDate date expect = 
+    member this.ValidDate date (expect : int)  = 
         let day = getDayFromString date
         Assert.That(day.Value, Is.EqualTo(expect))
 
@@ -26,7 +26,7 @@ type NullAndExceptionsTests() =
     [<TestCase("2023-01-25", 25)>]
     [<TestCase("9999-11-30", 30)>]
     [<TestCase("0001-08-8", 8)>]
-    member this.ValidDateWithMatch date expect = 
+    member this.ValidDateWithMatch date (expect : int) = 
         let day = getDayFromStringWithMatch date
         Assert.That(day.Value, Is.EqualTo(expect))
 
@@ -58,7 +58,7 @@ type NullAndExceptionsTests() =
     [<TestCase(10, 5, 2)>]
     [<TestCase(11, 2, 5.5)>]
     [<TestCase(100, 4, 25)>]
-    member this.SuccessDivide x y expected =
+    member this.SuccessDivide x y (expected : decimal) =
         let result = tryDivide x y
         let actual = resultToOption result
         Assert.That(actual.Value, Is.EqualTo(expected))
